@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/carts/mine/payment-process" method="POST">
+        <service class="Odontoprev\Checkout\Api\PaymentInformationManagementInterface" method="savePaymentInformationAndPlaceOrder"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+        <data>
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+            <parameter name="processingQueue">%processing_queue%</parameter>
+        </data>
+    </route>
+    <route url="/V1/carts/mine/payment-information" method="GET">
+        <service class="Odontoprev\Checkout\Api\PaymentInformationManagementInterface" method="getPaymentInformation"/>
+        <resources>
+            <resource ref="self" />
+        </resources>
+        <data>
+            <parameter name="cartId" force="true">%cart_id%</parameter>
+        </data>
+    </route>
+</routes>

@@ -1,0 +1,14 @@
+<!--@subject Problemas com a sua forma de pagamento @-->
+
+{{template config_path="odontoprev/email/header_template"}}
+
+<div style="text-align: center;">
+    <img style="display: inline-block; width: 257px; vertical-align: top; width: 600px;" src="{{store url=''}}pub/static-images/payment-notification/odontoprev-sua-boca-fala-por-voce-small.jpg" alt="Boleto vencido" border="0" width="600px">
+</div>
+<p>{{trans "Problemas com a sua forma de pagamento"}}</p>
+<div>{{var message | raw}}</div>
+<div style="text-align: right;">
+    <a href="{{var odpv_cms_url}}/planos" style="background: #84BD00; float: right; padding: 18px; color: #FFF; text-decoration: none;"><b>Ver planos</b></a>
+</div>
+
+{{template config_path="odontoprev/email/footer_template"}}

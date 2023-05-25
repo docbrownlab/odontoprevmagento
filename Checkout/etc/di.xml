@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Odontoprev\Checkout\Api\PaymentInformationManagementInterface"
+                type="Odontoprev\Checkout\Model\PaymentInformationManagement" />
+    <type name="Odontoprev\Checkout\Logger\Handler">
+       <arguments>
+           <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+       </arguments>
+   </type>
+   <type name="Odontoprev\Checkout\Logger\Logger">
+       <arguments>
+           <argument name="name" xsi:type="string">Magenest_Custom_Log</argument>
+           <argument name="handlers"  xsi:type="array">
+               <item name="system" xsi:type="object">Odontoprev\Checkout\Logger\Handler</item>
+           </argument>
+       </arguments>
+   </type>
+</config>

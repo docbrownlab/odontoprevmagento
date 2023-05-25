@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Payment Method Facade configuration -->
+    <virtualType name="BraspagIntegrationFacade" type="Magento\Payment\Model\Method\Adapter">
+        <arguments>
+            <argument name="code" xsi:type="const">\Odontoprev\BraspagIntegration\Model\Ui\ConfigProvider::CODE</argument>
+            <argument name="formBlockType" xsi:type="string">Magento\Payment\Block\Form</argument>
+            <argument name="infoBlockType" xsi:type="string">Odontoprev\BraspagIntegration\Block\Info</argument>
+            <argument name="valueHandlerPool" xsi:type="object">BraspagIntegrationValueHandlerPool</argument>
+            <argument name="commandPool" xsi:type="object">BraspagIntegrationCommandPool</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="PaymentAccountDebit" type="Magento\Payment\Model\Method\Adapter">
+        <arguments>
+            <argument name="code" xsi:type="const">\Odontoprev\BraspagIntegration\Model\Ui\PaymentAccountDebit::CODE</argument>
+            <argument name="formBlockType" xsi:type="string">Magento\Payment\Block\Form</argument>
+            <argument name="infoBlockType" xsi:type="string">Odontoprev\BraspagIntegration\Block\Info</argument>
+            <argument name="valueHandlerPool" xsi:type="object">BraspagIntegrationValueHandlerPool</argument>
+            <argument name="commandPool" xsi:type="object">BraspagIntegrationCommandPool</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Configuration reader -->
+    <virtualType name="BraspagIntegrationConfig" type="Magento\Payment\Gateway\Config\Config">
+        <arguments>
+            <argument name="methodCode" xsi:type="const">\Odontoprev\BraspagIntegration\Model\Ui\ConfigProvider::CODE</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="PaymentAccountDebitConfig" type="Magento\Payment\Gateway\Config\Config">
+        <arguments>
+            <argument name="methodCode" xsi:type="const">\Odontoprev\BraspagIntegration\Model\Ui\PaymentAccountDebit::CODE</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Logger, initialized with BraspagIntegrationConfig -->
+    <virtualType name="BraspagIntegrationLogger" type="Magento\Payment\Model\Method\Logger">
+        <arguments>
+            <argument name="config" xsi:type="object">BraspagIntegrationConfig</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Odontoprev\BraspagIntegration\Gateway\Http\Client\ClientMock">
+        <arguments>
+            <argument name="logger" xsi:type="object">BraspagIntegrationLogger</argument>
+        </arguments>
+    </type>
+
+    <!-- Commands infrastructure -->
+    <virtualType name="BraspagIntegrationCommandPool" type="Magento\Payment\Gateway\Command\CommandPool">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="authorize" xsi:type="string">BraspagIntegrationAuthorizeCommand</item>
+                <item name="capture" xsi:type="string">BraspagIntegrationCaptureCommand</item>
+                <item name="void" xsi:type="string">BraspagIntegrationVoidCommand</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Authorize command -->
+    <virtualType name="BraspagIntegrationAuthorizeCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
+        <arguments>
+            <argument name="requestBuilder" xsi:type="object">BraspagIntegrationAuthorizationRequest</argument>
+            <argument name="handler" xsi:type="object">BraspagIntegrationResponseHandlerComposite</argument>
+            <argument name="transferFactory" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Http\TransferFactory</argument>
+            <argument name="client" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Http\Client\ClientMock</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Authorization Request -->
+    <virtualType name="BraspagIntegrationAuthorizationRequest" type="Magento\Payment\Gateway\Request\BuilderComposite">
+        <arguments>
+            <argument name="builders" xsi:type="array">
+                <item name="transaction" xsi:type="string">Odontoprev\BraspagIntegration\Gateway\Request\AuthorizationRequest</item>
+                <item name="mockData" xsi:type="string">Odontoprev\BraspagIntegration\Gateway\Request\MockDataRequest</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Odontoprev\BraspagIntegration\Gateway\Request\AuthorizationRequest">
+        <arguments>
+            <argument name="config" xsi:type="object">BraspagIntegrationConfig</argument>
+        </arguments>
+    </type>
+
+    <!-- Capture command -->
+    <virtualType name="BraspagIntegrationCaptureCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
+        <arguments>
+            <argument name="requestBuilder" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Request\CaptureRequest</argument>
+            <argument name="handler" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Response\TxnIdHandler</argument>
+            <argument name="transferFactory" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Http\TransferFactory</argument>
+            <argument name="validator" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Validator\ResponseCodeValidator</argument>
+            <argument name="client" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Http\Client\ClientMock</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Capture Request -->
+    <type name="Odontoprev\BraspagIntegration\Gateway\Request\CaptureRequest">
+        <arguments>
+            <argument name="config" xsi:type="object">BraspagIntegrationConfig</argument>
+        </arguments>
+    </type>
+
+    <!-- Void command -->
+    <virtualType name="BraspagIntegrationVoidCommand" type="Magento\Payment\Gateway\Command\GatewayCommand">
+        <arguments>
+            <argument name="requestBuilder" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Request\VoidRequest</argument>
+            <argument name="handler" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Response\TxnIdHandler</argument>
+            <argument name="transferFactory" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Http\TransferFactory</argument>
+            <argument name="validator" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Validator\ResponseCodeValidator</argument>
+            <argument name="client" xsi:type="object">Odontoprev\BraspagIntegration\Gateway\Http\Client\ClientMock</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Void Request -->
+    <type name="Odontoprev\BraspagIntegration\Gateway\Request\VoidRequest">
+        <arguments>
+            <argument name="config" xsi:type="object">BraspagIntegrationConfig</argument>
+        </arguments>
+    </type>
+
+    <!-- Response handlers -->
+    <virtualType name="BraspagIntegrationResponseHandlerComposite" type="Magento\Payment\Gateway\Response\HandlerChain">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="txnid" xsi:type="string">Odontoprev\BraspagIntegration\Gateway\Response\TxnIdHandler</item>
+                <item name="fraud" xsi:type="string">Odontoprev\BraspagIntegration\Gateway\Response\FraudHandler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <!-- Value handlers infrastructure -->
+    <virtualType name="BraspagIntegrationValueHandlerPool" type="Magento\Payment\Gateway\Config\ValueHandlerPool">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="default" xsi:type="string">BraspagIntegrationConfigValueHandler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="BraspagIntegrationConfigValueHandler" type="Magento\Payment\Gateway\Config\ConfigValueHandler">
+        <arguments>
+            <argument name="configInterface" xsi:type="object">BraspagIntegrationConfig</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Odontoprev\BraspagIntegration\Block\Info">
+        <arguments>
+            <argument name="config" xsi:type="object">BraspagIntegrationConfig</argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="notify_unpaid_billets" xsi:type="object">Odontoprev\BraspagIntegration\Console\Command\NotifyUnpaidBilletsCommand</item>
+                <item name="notify_expired_billets" xsi:type="object">Odontoprev\BraspagIntegration\Console\Command\NotifyExpiredBilletsCommand</item>
+                <item name="billet_check_status" xsi:type="object">Odontoprev\BraspagIntegration\Console\Command\BilletCheckStatusCommand</item>
+                <item name="check_paid_billets" xsi:type="object">Odontoprev\BraspagIntegration\Console\Command\CheckPaidBilletsCommand</item>
+            </argument>
+        </arguments>
+    </type>
+
+
+</config>

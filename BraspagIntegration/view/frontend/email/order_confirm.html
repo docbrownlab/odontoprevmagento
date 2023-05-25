@@ -1,0 +1,11 @@
+<!--@subject Pedido recebido @-->
+
+{{template config_path="odontoprev/email/header_template"}}
+
+<div style="text-align: center;">
+    <img style="display: inline-block; width: 257px; vertical-align: top; width: 600px;" src="{{store url=''}}pub/static-images/payment-notification/odontoprev-sua-boca-fala-por-voce-small.jpg" alt="Bem vindo à OdontoPrev" border="0" width="600px">
+</div>
+<p>{{trans "Olá"}} {{var customer_name}},</p>
+<div>{{var message | raw}}</div>
+
+{{template config_path="odontoprev/email/footer_template"}}

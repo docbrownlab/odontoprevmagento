@@ -1,0 +1,393 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print",
+				"printf"
+			],
+			[
+				"$storeM",
+				"$storeManagerDataList"
+			],
+			[
+				"vali",
+				"validate_string"
+			],
+			[
+				"valida",
+				"validate_integers"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Main.php",
+			"settings":
+			{
+				"buffer_size": 2433,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/francisco/Projetcs/Odontoprev",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev"
+	],
+	"file_history":
+	[
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/design/frontend/Odontoprev/odontoprev/web/js/app.min.js",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Block/User/Edit/Tab/Main.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Model/User.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Setup/InstallSchema.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Main.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Setup/InstallData.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Controller/Adminhtml/User/Save.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Controller/Adminhtml/User.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Console/UnlockAdminAccountCommand.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Block/User.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Controller/Adminhtml/Orders/View.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Broker/Edit/ResetButton.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Broker/Edit/GenericButton.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Order.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/User/Edit/Tab/Main.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/Block/Adminhtml/User/Edit/Tab/Main.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Block/Role/Edit.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Block/Role/Tab/Users.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/vendor/magento/module-user/Block/Role/Grid/User.php",
+		"/home/francisco/Projetcs/Odontoprev/magento/vendor/magento/module-user/Block/Role/Grid/User.php",
+		"/home/francisco/Projetcs/Odontoprev/magento/dev/tests/functional/tests/app/Magento/Catalog/Test/Block/Adminhtml/Product/Attribute/Set/Main.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/etc/adminhtml/di.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/etc/module.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/registration.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/etc/module.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/etc/adminhtml/routes.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Controller/Adminhtml/Broker/Save.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Controller/Adminhtml/Broker/Index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Controller/Adminhtml/Index/Index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/etc/webapi.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Widget/Grid.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Sales/Block/Adminhtml/Order/View/Tab/ProposalDetail.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/registration.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Setup/UpgradeSchema.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/Controller/Adminhtml/Index/Index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/Controller/Settings/Payment.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/Block/Adminhtml/Payment.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/view/adminhtml/layout/AdminUserStores_index_index.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Broker/Edit/BackButton.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Broker/Edit/DeleteButton.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Broker/Edit/View/Links.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Block/Adminhtml/Broker/Edit/SaveButton.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags/Controller/Adminhtml/Orders/Index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/etc/adminhtml/menu.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/etc/adminhtml/routes.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/etc/adminhtml/routes.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/view/adminhtml/templates/AdminUserStores.phtml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/Block/AdminUserStores.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/view/adminhtml/layout/send_to_core_index_index.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/view/adminhtml/layout/admin_user_stores_index.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/Controller/Index/Index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/etc/frontend/routes.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/AdminUserStores/etc/module.xsd",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Helper/SendToCoreHelper.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Model/ShippingLogModel.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Model/CoreModel.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/etc/di.xml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Helper/InfoHelper.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/registration.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Sales/Model/Service/OrderService.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Setup/InstallSchema.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Controller/Adminhtml/Submit/Submit.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Controller/Adminhtml/Index/Index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/SendToCore/Block/Adminhtml/Button/Toolbar.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Sales/Model/OrderRepository.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Sales/Model/OrderExtra.php",
+		"/home/francisco/Projetcs/Odontoprev/magento/vendor/magento/framework/DB/Adapter/AdapterInterface.php",
+		"/home/francisco/Projetcs/Odontoprev/magento/vendor/magento/framework/Setup/InstallSchemaInterface.php",
+		"/home/francisco/Projetcs/Odontoprev/magento/dev/tests/functional/tests/app/Magento/Customer/Test/Handler/Customer/CustomerInterface.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Customer/Api/CustomerInterface.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Customer/Api/AccountManagementInterface.php",
+		"/var/www/tdd/html/index.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lock_fingerprint/src/Service/DeviceInfo.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lock_fingerprint/src/Service/LockUser.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lead_entity/src/Plugin/rest/resource/OdpvLeadResourceSerasa.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lock_fingerprint/src/Service/libs/device-detect/detect.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/.gitignore",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/core/lib/Drupal/Core/DrupalKernel.php.orig",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/templates/pme.html.twig",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/assets/js/source/components/Steps/Lead/index.js",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/assets/js/source/components/Steps/Lead/attrs/methods/populateSendFormObject.js",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/assets/js/source/components/Steps/Lead/attrs/methods/checkLivesQuatity.js",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/assets/js/source/components/Steps/Lead/attrs/methods/sendFormLead.js",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/scripts/deploy/prod.sh",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/themes/custom/odontoprev_cms/package.json",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/assets/js/source/components/Steps/Lead/attrs/methods/index.js",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/src/Plugin/Block/PmeForm.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_pme/assets/js/source/components/Steps/Lead/attrs/methods/setModalError.js",
+		"/home/francisco/Projetcs/Odontoprev/magento/docker-compose.yml",
+		"/home/francisco/Projetcs/Odontoprev/magento/project-community-edition/docker-compose.yml",
+		"/var/www/tdd/html/tests/CDC/Loja/Produto/MaiorEMenorTest.php",
+		"/var/www/tdd/html/src/CDC/Loja/Produto/Produto.php",
+		"/var/www/tdd/html/src/CDC/Loja/Produto/MaiorEMenor.php",
+		"/var/www/tdd/html/src/CDC/Loja/Carrinho/CarrinhoDeCompras.php",
+		"/var/www/tdd/html/composer.json",
+		"/var/www/tdd/html/tests/CDC/Loja/Produto/TestaMaiorEMenor.php",
+		"/var/www/tdd/html/tests/TestaMaiorEMenor.php",
+		"/var/www/tdd/html/MaiorEMenor.php",
+		"/var/www/tdd/html/src",
+		"/var/www/tdd/html/tests/MaiorEMenor.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lead_entity/src/Plugin/rest/resource/OdpvLeadResourceInsertLead.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lead_entity/odpv_lead_entity.install",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lead_entity/src/Service/MailPrepare.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lead_custom_settings/src/Form/LeadCustomSettingsForm.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/libraries/odontoprev-sdk-php/src/config/api.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/libraries/odontoprev-sdk-php/src/Client.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/composer.json",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docroot/profiles/odpv_profile/modules/custom/odpv_lead_entity/src/Plugin/Action/VboExportCsvLead.php",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/composer.json",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/composer.json",
+		"/home/francisco/Projetcs/Odontoprev/odpv-cms/docker-compose.yml",
+		"/home/francisco/Projetcs/Odontoprev/odpv-store/docker-compose.yml",
+		"/home/francisco/.config/sublime-text-3/Packages/User/auto_save.sublime-settings"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"/home/francisco/Projetcs/Odontoprev/odpv-store",
+			"/home/francisco/Projetcs/Odontoprev/odpv-store/docroot/app/code/Odontoprev/Tags"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Core",
+			"id",
+			"odontoprev_tags_broker"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1159,
+								1159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 467.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"13":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 375.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

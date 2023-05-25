@@ -1,0 +1,146 @@
+<?php /** @var $block \Magento\Sales\Block\Adminhtml\Order\View\Tab\Info */ ?>
+<?php
+$order = $block->getOrder();
+$paymentMethod = $order->getPayment()->getMethod();
+
+$keyBilletUrl = [
+    'braspag_integration_billet', 
+    'braspag_integration_billet_account_debit'
+];
+
+?>
+
+<div id="order-messages">
+    <?php
+    echo $block->getChildHtml('order_messages');
+    ?>
+</div>
+<?php
+echo $block->getChildHtml('order_info');
+?>
+
+<input type="hidden" name="order_id" value="<?php /* @escapeNotVerified */ echo $order->getId() ?>"/>
+
+<section class="admin__page-section order-view-billing-shipping">
+    <div class="admin__page-section-title">
+        <span class="title">
+            <?php
+            /* @escapeNotVerified */
+            echo __('Payment &amp; Shipping Method');
+            ?>
+        </span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-payment-method<?php echo ($order->getIsVirtual()) ? ' order-payment-method-virtual' : ''; ?>">
+            <div class="admin__page-section-item-title">
+                <span class="title">
+                    <?php
+                    /* @escapeNotVerified */
+                    echo __('Payment Information');
+                    ?>
+                </span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <div class="order-payment-method-title">
+                    <?php
+                    echo $block->getPaymentHtml();
+                    ?>
+                </div>
+                <div class="order-payment-currency">
+                    <?php
+                    /* @escapeNotVerified */
+                    echo __('The order was placed using %1.', $order->getOrderCurrencyCode());
+                    ?>
+                </div>
+                <div class="order-payment-additional">
+                    <?php
+                    echo $block->getChildHtml('order_payment_additional');
+
+                    if (
+                        in_array($paymentMethod, $keyBilletUrl) &&
+                        $order->getPayment()->getAdditionalInformation()
+                    ) {
+                        $additionalInformation = $order->getPayment()->getAdditionalInformation();
+
+                        $billetUrl = $additionalInformation['billet_url'];
+                        $billetPaymentId = substr($billetUrl, strrpos($billetUrl, '/') + 1);
+                    ?>
+                        <p>
+                            <a href="<?php echo $billetUrl; ?>" target="_blank">Link do boleto</a>
+                        </p>
+                        <p>
+                            <b>Braspag Payment ID:</b><br><?php echo $billetPaymentId; ?>
+                        </p>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        <?php
+        echo $block->getChildHtml('order_shipping_view');
+        ?>
+    </div>
+</section>
+
+<?php
+echo $block->getGiftOptionsHtml();
+?>
+
+<section class="admin__page-section">
+    <div class="admin__page-section-title">
+        <span class="title">
+            <?php
+            /* @escapeNotVerified */
+            echo __('Items Ordered');
+            ?>
+        </span>
+    </div>
+    <?php
+    echo $block->getItemsHtml();
+    ?>
+</section>
+
+<section class="admin__page-section">
+    <div class="admin__page-section-title">
+        <span class="title">
+            <?php
+            /* @escapeNotVerified */
+            echo __('Order Total');
+            ?>
+        </span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-comments-history">
+            <div class="admin__page-section-item-title">
+                <span class="title">
+                    <?php
+                    /* @escapeNotVerified */
+                    echo __('Notes for this Order');
+                    ?>
+                </span>
+            </div>
+            <?php
+            echo $block->getChildHtml('order_history');
+            ?>
+        </div>
+
+        <div class="admin__page-section-item order-totals">
+            <div class="admin__page-section-item-title">
+                <span class="title">
+                    <?php
+                    /* @escapeNotVerified */
+                    echo __('Order Totals');
+                    ?>
+                </span>
+            </div>
+            <?php
+            echo $block->getChildHtml('order_totals');
+            ?>
+        </div>
+    </div>
+</section>
+
+<?php
+echo $block->getChildHtml('popup_window');
+?>

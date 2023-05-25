@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/carts/mine/agreements" method="POST">
+        <service class="Odontoprev\Agreement\Api\AgreementInterface" method="save"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/carts/:quoteId/agreements" method="GET">
+        <service class="Odontoprev\Agreement\Api\AgreementInterface" method="exist"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    <route url="/V1/agreements/ip" method="GET">
+        <service class="Odontoprev\Agreement\Api\AgreementInterface" method="getIp"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+</routes>

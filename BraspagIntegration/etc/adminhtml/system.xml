@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="braspag_integration_billet" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Braspag Integration</label>
+
+                <field id="environment" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Environment</label>
+                    <comment>Mode Active.</comment>
+                    <source_model>Odontoprev\BraspagIntegration\Model\Config\Source\Custom</source_model>
+                    <config_path>odontoprev/braspag_integration/environment</config_path>
+                </field>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>payment/braspag_integration_billet/active</config_path>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+
+                <field id="merchant_id" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Merchant ID</label>
+                    <comment>store identifier in Braspag. Contact Braspag to get your own merchant id.</comment>
+                    <config_path>odontoprev/braspag_integration/merchant_id</config_path>
+                </field>
+                <field id="merchant_key" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Merchant Key</label>
+                    <comment>Public key for Double Authentication Braspag. Contact Braspag to get your own merchant id.</comment>
+                    <config_path>odontoprev/braspag_integration/merchant_key</config_path>
+                </field>
+                <field id="demonstrative" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Demonstrative</label>
+                    <comment>Billet demonstrative.</comment>
+                    <config_path>odontoprev/braspag_integration/demonstrative</config_path>
+                </field>
+                <field id="instructions" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Instructions</label>
+                    <comment>Billet instructions.</comment>
+                    <config_path>odontoprev/braspag_integration/instructions</config_path>
+                </field>
+                <field id="assignor" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Assignor</label>
+                    <comment>Billet assignor.</comment>
+                    <config_path>odontoprev/braspag_integration/assignor</config_path>
+                </field>
+                <field id="expiration_days" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Expiration days</label>
+                    <comment>Billet expiration days.</comment>
+                    <config_path>odontoprev/braspag_integration/expiration_days</config_path>
+                </field>
+                <field id="payment_action" translate="label" type="select" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment Action</label>
+                    <source_model>Odontoprev\BraspagIntegration\Model\Adminhtml\Source\PaymentAction</source_model>
+                </field>
+                <field id="return_url" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Return URL</label>
+                    <comment />
+                    <config_path>odontoprev/braspag_integration/return_url</config_path>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="160" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>Sort Order</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+
+                <field id="codigo_tipo_cobranca_braspag" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Código Tipo Cobrança</label>
+                    <config_path>odontoprev/send_to_core/codigo_tipo_cobranca_braspag</config_path>
+                </field>
+                <field id="sigla_tipo_cobranca_braspag" translate="label comment" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sigla Tipo Cobrança</label>
+                    <config_path>odontoprev/send_to_core/sigla_tipo_cobranca_braspag</config_path>
+                </field>
+                <field id="codigo_tipo_cobranca_primeira_parcela_braspag" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Código Tipo Cobrança Primeira Parcela</label>
+                    <config_path>odontoprev/send_to_core/codigo_tipo_cobranca_primeira_parcela_braspag</config_path>
+                </field>
+            </group>
+            <group id="braspag_integration_billet_account_debit" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Odonto Bank debit</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>payment/braspag_integration_billet_account_debit/active</config_path>
+                </field>
+                <field id="bank_list" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="30">
+                    <label>Lista de bancos</label>
+                    <comment>
+                        <![CDATA[
+                            <div style="
+                                    color: #444;
+                                    border: 1px #ddd solid;
+                                    padding: 5px;
+                                    font-size: 10px;
+                                    background: #FEEFB3;"
+                            >
+                                <p>Faça o cadastro do(s) banco(s) seguinto a descrição abaixo:</p>
+                                <ul style="margin-left: 5%;">
+                                    <li>Insira o nome do banco</li>
+                                    <li>Insira uma vírgula (,)</li>
+                                    <li>Insira o código do banco</li>
+                                    <li>Insira uma vírgula (,)</li>
+                                    <li>Insira o código de débito da conta</li>
+                                    <ul style="margin-left: 5%;">
+                                        <li>
+                                            Formato: <strong>[bank_name],[bank_code],[debit_account_code]</strong>
+                                        </li>
+                                    </ul>
+                                    <li>Insira ponto e vírgula (;) para cadastrar mais de um banco</li>
+                                    <ul style="margin-left: 5%;">
+                                        <li>
+                                            Formato:&nbsp
+                                            <strong>
+                                                [bank_name],[bank_code],[debit_account_code];[bank_name],[bank_code],[debit_account_code];...
+                                            </strong>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        ]]>
+                    </comment>
+                    <config_path>payment/braspag_integration_billet_account_debit/bank_list</config_path>
+                    <backend_model>Odontoprev\BraspagIntegration\Model\Config\Backend\FormatValidator</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="order_confirm_email" label="Order confirm email" file="order_confirm.html" type="html" module="Odontoprev_BraspagIntegration" area="frontend"/>
+    <template id="unpaid_billet_email" label="Unpaid billet notification" file="unpaid_billet_email.html" type="html" module="Odontoprev_BraspagIntegration" area="frontend"/>
+    <template id="expired_billet_email" label="Expired billet notification" file="expired_billet_email.html" type="html" module="Odontoprev_BraspagIntegration" area="frontend"/>
+    <template id="invalid_paid_billet_email" label="Invalid paid billet" file="invalid_paid_billet.html" type="html" module="Odontoprev_BraspagIntegration" area="adminhtml"/>
+</config>
